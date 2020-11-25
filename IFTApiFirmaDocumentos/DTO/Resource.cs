@@ -13,6 +13,6 @@ namespace IFTApiFirmaDocumentos.DTO
         public static string ErrorCertificado= "No se ha podido validar la fiel. Razón: Certificado inválido";
         public static string ErrorFiel = "No se ha podido validar la fiel. Razón: Fiel inválida";
         public static string ErrorExpiracion = "No se ha podido validar la fiel. Razón: Certificado expirado";
-        public static string ErrorParidad;
+        public static string ErrorParidad ="No se ha podido validar la fiel: La .key no coincide con la fiel proporcionada";
     }
 }

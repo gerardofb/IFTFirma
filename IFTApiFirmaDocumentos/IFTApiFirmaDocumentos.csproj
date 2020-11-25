@@ -52,6 +52,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -166,8 +167,10 @@
     <Compile Include="DTO\FirmaDigital.cs" />
     <Compile Include="DTO\FirmaElectronica.cs" />
     <Compile Include="DTO\Ocsp.cs" />
+    <Compile Include="DTO\OpenSSLKey.cs" />
     <Compile Include="DTO\PrivateKey.cs" />
     <Compile Include="DTO\RequestCadenaOriginal.cs" />
+    <Compile Include="DTO\RequestHashArchivo.cs" />
     <Compile Include="DTO\Resource.cs" />
     <Compile Include="DTO\Utilerias.cs" />
     <Compile Include="Global.asax.cs">

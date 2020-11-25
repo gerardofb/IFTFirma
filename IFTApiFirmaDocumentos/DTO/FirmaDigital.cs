@@ -29,10 +29,10 @@ namespace IFTApiFirmaDocumentos.DTO
             firma.certificate.ValidaFiel();
             firma.certificate.ValidaFechaExpiracion();
             // PARA EJECUTAR ESTA SECCIÓN SE REQUIERE UN CERTIFICADO ESPECÍFICO DEL INSTITUTO FEDERAL DE TELECOMUNICACIONES
-            firma.certificate.ValidaOscp();
+            //firma.certificate.ValidaOscp();
             firma.privatekey.ReadPrivate();
             // PARA EJECUTAR ESTA SECCIÓN SE REQUIERE UN CERTIFICADO ESPECÍFICO DEL INSTITUTO FEDERAL DE TELECOMUNICACIONES
-            //firma.Paridad();
+            firma.Paridad();
         }
         public string Firma(string cadena)
         {

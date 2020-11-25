@@ -19,6 +19,26 @@ namespace IFTApiFirmaDocumentos.DTO
         public AsymmetricKeyParameter PrivateKeyParameter { get; set; }
         public string Password { get; set; }
 
+        public void ReadPrivate(byte[] claveprivada, string password)
+        {
+            try
+            {
+                this.KeyBytes = claveprivada;
+                this.Password = password;
+                System.IO.StringWriter stWrite = new System.IO.StringWriter();
+                PrivateKeyParameter = PrivateKeyFactory.DecryptKey(Password.ToCharArray(), KeyBytes);
+                MemoryStream ms = new MemoryStream();
+                TextWriter writer = new StreamWriter(ms);
+                Org.BouncyCastle.OpenSsl.PemWriter pmw = new Org.BouncyCastle.OpenSsl.PemWriter(stWrite);
+                pmw.WriteObject(PrivateKeyParameter);
+                stWrite.Close();
+                PrivateKeyRSA = stWrite.ToString();
+            }
+            catch (Exception exe)
+            {
+                throw new Exception(Resource.ErrorPassword);
+            }
+        }
         public void ReadPrivate()
         {
             try
